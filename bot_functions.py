@@ -15,12 +15,20 @@ def print_voff_message():
 
 def print_rep_message():
     return """**Rosies Rep-planerare** <:krille:1214953899497099264>
+
 Vill du: 
 **1.** Kolla när alla kioskmongon kan repa?
-**2.** Boka in ett rep?"""
+**2.** Boka in ett rep?
+**X.** Avbryt
+"""
 
 def check_availability():
     now = datetime.now()
     _, week, _ = now.isocalendar()
-    return "@everyone Vilka dagar kan alla repa/ses nästa vecka? Vecka " + str(week+1)
+    return f"""@everyone
+Vilka dagar kan alla repa/ses nästa vecka? **Vecka {str(week+1)}**
+Reagera, mina bröder i krist.
+
+*OBS: ✝️ = Torsdag*
+"""
     
