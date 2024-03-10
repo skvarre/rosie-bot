@@ -24,6 +24,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('!'):
+        # delete the message
         # split message content by spaces
         command = message.content.split(' ')
         # if the first word after / is 'hello'
@@ -35,6 +36,7 @@ async def on_message(message):
             # send a message to the channel
             await message.channel.send(print_voff_message())
         elif command[0] == '!rep':
+            await message.delete()
             latest_author = message.author
             command = 'rep'
             answer = await message.channel.send(print_rep_message())
@@ -48,7 +50,8 @@ async def on_reaction_add(reaction, user):
         return
     if user == latest_author and command == 'rep':
         await rep_planerare(reaction)
-        
+    
+    print(reaction.count)        
 
 async def rep_planerare(reaction):
     if reaction.emoji == '1️⃣':

@@ -4,9 +4,10 @@ from datetime import datetime
 def print_help_message():
     return """
     **BOTEN ROSIE**\nJag är bortsprugna vovven Rosie. Här är några kommandon jag förstår:```
-!help - Skriver ut det här meddelandet
-!voff - Voffar tillbaka```
-    """
+!help - Skriver ut det här meddelandet.
+!voff - Voffar tillbaka.
+!rep - Planera rep.```
+"""
 
 def print_voff_message():
     list = ["Voff!", "Voff Voff!", "Vore gott med en bira, VOFF!", "VOFFIIIII!", "voffvoffvoff",
